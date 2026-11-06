@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MNN Studio
 
-## Getting Started
+**Personal Portfolio | Data Science · Artificial Intelligence · Web Development**
 
-First, run the development server:
+Welcome to MNN Studio, my personal portfolio showcasing my journey as an aspiring Data Scientist and developer.
+
+I'm currently in my second year of studying Data Science and hold a Higher Certificate in Software Development. I'm interested in exploring how technology, data and creativity can come together to build meaningful digital experiences.
+
+## About the Portfolio
+
+This portfolio showcases my technical skills, personal projects and ongoing exploration of software development, machine learning and artificial intelligence.
+
+## Technologies Used
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Git and GitHub
+
+## Featured Projects
+
+### The Wigology
+A personalised hair discovery and customisation platform combining software development, hair education and user experience.
+
+The initial Python and Streamlit prototype is published, with a Next.js website currently in development.
+
+### AI Response Preference Predictor
+A planned machine learning project exploring how to predict human preferences between AI-generated responses.
+
+## Portfolio Features
+
+- Responsive desktop and mobile design
+- Project showcases and individual project pages
+- Technical skills overview
+- GitHub and LinkedIn integration
+
+## Development
+
+To run the portfolio locally:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000` in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built with curiosity and intention.
