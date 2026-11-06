@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ArrowLeft, ArrowUp, ArrowUpRight } from "lucide-react";
 
 const projects = {
   wigology: {
@@ -76,9 +77,10 @@ export default async function ProjectPage({
         {/* BACK TO PORTFOLIO */}
         <Link
           href="/#projects"
-          className="text-sm font-medium text-[#A77F89] transition-colors hover:text-[#25252A]"
+          className="inline-flex items-center gap-2 text-sm font-medium text-[#A77F89] transition-colors hover:text-[#25252A]"
         >
-          ← Back to Projects
+          <ArrowLeft size={16} strokeWidth={1.8} aria-hidden="true" />
+          Back to Projects
         </Link>
 
         {/* PROJECT HEADER */}
@@ -126,7 +128,8 @@ export default async function ProjectPage({
                   href="#project-showcase"
                   className="mt-9 inline-flex items-center gap-2 rounded-full bg-[#C6A3AA] px-6 py-3 text-sm font-semibold text-[#25252A] transition-colors hover:bg-[#D9B8C0]"
                 >
-                  Explore the Project ↗
+                  Explore the Project
+                  <ArrowUpRight size={18} strokeWidth={1.8} aria-hidden="true" />
                 </a>
               </div>
 
@@ -389,7 +392,8 @@ export default async function ProjectPage({
                 rel="noopener noreferrer"
                 className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#C6A3AA] px-7 py-3 text-sm font-semibold text-[#25252A] transition-colors hover:bg-[#D9B8C0]"
               >
-                View Live App ↗
+                View Live App
+                <ArrowUpRight size={18} strokeWidth={1.8} aria-hidden="true" />
               </a>
 
               <div className="mt-6 max-w-3xl border-l-2 border-[#DCC9CE] pl-4">
@@ -420,9 +424,10 @@ export default async function ProjectPage({
 
             <Link
               href="/#projects"
-              className="text-sm font-medium text-[#A77F89] hover:text-[#25252A]"
+              className="inline-flex items-center gap-2 text-sm font-medium text-[#A77F89] hover:text-[#25252A]"
             >
-              Back to Portfolio ↑
+              Back to Portfolio
+              <ArrowUp size={16} strokeWidth={1.8} aria-hidden="true" />
             </Link>
           </div>
         </footer>
