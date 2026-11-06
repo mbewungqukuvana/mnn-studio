@@ -1,6 +1,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
 export type Project = {
   title: string;
@@ -23,6 +24,7 @@ export default function ProjectCard({
       href={`/projects/${project.slug}`}
       className="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#EAEAEA] bg-white transition-all duration-300 hover:-translate-y-1 hover:border-[#C6A3AA] hover:shadow-lg"
     >
+      {/* PROJECT PREVIEW */}
       <div className="relative flex h-64 items-center justify-center overflow-hidden border-b border-[#EEEEEE] bg-white p-3 sm:h-72">
         {project.preview === "wigology" ? (
           <Image
@@ -48,6 +50,7 @@ export default function ProjectCard({
                     <p className="text-xs text-[#6D6970]">
                       {response}
                     </p>
+
                     <div className="mt-4 h-2 rounded bg-[#EAEAEA]" />
                     <div className="mt-2 h-2 w-3/4 rounded bg-[#EAEAEA]" />
                   </div>
@@ -62,6 +65,7 @@ export default function ProjectCard({
         )}
       </div>
 
+      {/* PROJECT INFORMATION */}
       <div className="flex flex-1 flex-col p-7">
         <div className="flex items-start justify-between gap-4">
           <p className="text-xs uppercase tracking-wider text-[#B58E98]">
@@ -81,6 +85,7 @@ export default function ProjectCard({
           {project.description}
         </p>
 
+        {/* TECHNOLOGIES */}
         <div className="mt-6 flex flex-wrap gap-2">
           {project.technologies.map((technology) => (
             <span
@@ -92,13 +97,21 @@ export default function ProjectCard({
           ))}
         </div>
 
+        {/* STATUS AND PROJECT LINK */}
         <div className="mt-auto flex items-center justify-between gap-4 pt-8">
           <span className="rounded-full border border-[#E5E5E5] px-4 py-2 text-xs text-[#9C7580]">
             {project.status}
           </span>
 
-          <span className="text-sm font-medium group-hover:text-[#B58E98]">
-            Explore Project ↗
+          <span className="inline-flex items-center gap-2 text-sm font-medium text-[#25252A] transition-colors duration-300 group-hover:text-[#B58E98]">
+            Explore Project
+
+            <ArrowUpRight
+              size={18}
+              strokeWidth={1.8}
+              aria-hidden="true"
+              className="shrink-0 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+            />
           </span>
         </div>
       </div>
