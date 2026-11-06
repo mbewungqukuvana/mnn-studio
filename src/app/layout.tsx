@@ -28,9 +28,8 @@ export const metadata: Metadata = {
     siteName: "MNN Studio",
     images: [
       {
-        url: "/social-preview.jpg",
-        width: 1200,
-        height: 630,
+        url: "/portrait.jpg",
+      
         alt: "Mbewukazi Nozipho Ngqukuvana — Data Science Portfolio",
       },
     ],
@@ -40,7 +39,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Mbewukazi Nozipho Ngqukuvana | Data Science Portfolio",
-    images: ["/social-preview.jpg"],
+    images: ["/portrait.jpg"],
   },
 };
 
