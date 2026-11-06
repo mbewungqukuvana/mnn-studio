@@ -1,16 +1,18 @@
 
+import { ArrowUpRight } from "lucide-react";
+
 const contactLinks = [
   {
     name: "GitHub",
     description: "Explore my code and projects",
     href: "https://github.com/mbewungqukuvana",
-    action: "View GitHub ↗",
+    action: "View GitHub",
   },
   {
     name: "LinkedIn",
     description: "Connect with me professionally",
     href: "https://www.linkedin.com/in/mbewukazi-nozipho-ngqukuvana-a9735b3b0",
-    action: "View LinkedIn ↗",
+    action: "View LinkedIn",
   },
 ];
 
@@ -54,9 +56,15 @@ export default function Contact() {
                 {contact.description}
               </p>
 
-              <p className="mt-7 text-sm font-medium text-[#A77F89] transition-colors group-hover:text-[#25252A]">
+              <span className="mt-7 inline-flex items-center gap-2 text-sm font-medium text-[#A77F89] transition-colors group-hover:text-[#25252A]">
                 {contact.action}
-              </p>
+
+                <ArrowUpRight
+                  size={18}
+                  strokeWidth={1.8}
+                  aria-hidden="true"
+                />
+              </span>
             </a>
           ))}
         </div>

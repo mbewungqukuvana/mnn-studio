@@ -26,9 +26,7 @@ export default function ContourBackground() {
     }
 
     function handleMouseMove(event: MouseEvent) {
-      if (!hero || !grid) return;
-
-      const bounds = hero.getBoundingClientRect();
+      const bounds = hero!.getBoundingClientRect();
 
       const x =
         (event.clientX - bounds.left) / bounds.width - 0.5;
@@ -36,29 +34,20 @@ export default function ContourBackground() {
       const y =
         (event.clientY - bounds.top) / bounds.height - 0.5;
 
-      grid.style.transform =
+      grid!.style.transform =
         `translate3d(${x * 24}px, ${y * 24}px, 0)`;
     }
 
     function resetGrid() {
-      if (!grid) return;
-
-      grid.style.transform = "translate3d(0, 0, 0)";
+      grid!.style.transform = "translate3d(0, 0, 0)";
     }
 
     hero.addEventListener("mousemove", handleMouseMove);
     hero.addEventListener("mouseleave", resetGrid);
 
     return () => {
-      hero.removeEventListener(
-        "mousemove",
-        handleMouseMove
-      );
-
-      hero.removeEventListener(
-        "mouseleave",
-        resetGrid
-      );
+      hero.removeEventListener("mousemove", handleMouseMove);
+      hero.removeEventListener("mouseleave", resetGrid);
     };
   }, []);
 
@@ -74,16 +63,16 @@ export default function ContourBackground() {
           backgroundImage: `
             linear-gradient(
               to right,
-              rgba(37,37,42,0.035) 1px,
+              rgba(181,142,152,0.09) 1px,
               transparent 1px
             ),
             linear-gradient(
               to bottom,
-              rgba(37,37,42,0.035) 1px,
+              rgba(181,142,152,0.09) 1px,
               transparent 1px
             )
           `,
-          backgroundSize: "40px 40px",
+          backgroundSize: "38px 38px",
         }}
       >
         {[
@@ -96,7 +85,7 @@ export default function ContourBackground() {
         ].map((point, index) => (
           <div
             key={index}
-            className="absolute h-[3px] w-[3px] rounded-full bg-[#B58E98]/25"
+            className="absolute h-[4px] w-[4px] rounded-full bg-[#B58E98]/40"
             style={{
               left: `${point.x}%`,
               top: `${point.y}%`,
